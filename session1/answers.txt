@@ -1,0 +1,15 @@
+cat data* | head -n 42 | tail -n 1
+
+grep "Eminem" data*.txt
+
+grep "1992" data*.txt
+
+grep "Pink Floyd" * | cut -d ,  -f 4
+
+grep "197" * | cut -d ,  -f 2 | sort -u
+
+grep "200" * > naughties.txt
+
+while read i; do year=$(echo $i | cut -d , -f 4); if (( $year > 1992 )) ; then echo $i; fi; done <<< $(cat data*.txt)
+
+while read i; do year=$(echo $i | cut -d , -f 4); echo $year $i; done <<< $(cat data*.txt) | sort
