@@ -1,0 +1,17 @@
+cat IOM-animals/birds.txt | cut -d "," -f 2 | sort
+
+cat IOM-animals/amphibians.txt | cut -d "," -f 2 | sort
+
+grep -h "common" IOM-animals/* | cut -d , -f 1 | sort
+
+cat IOM-animals/* | sort | head -n 50 | tail -1
+
+cat IOM-animals/mammals.txt | tail -n 10 | sort
+
+grep "bat" IOM-animals/mammals.txt | wc -l
+
+cat IOM-animals/* | wc -l
+
+wc -w data/* | sort | head -1
+
+./hello-world.sh > output.txt
