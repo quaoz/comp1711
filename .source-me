@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias -- -="cd -"
+
+alias reload="exec ${SHELL} -l"
+alias path="echo -e ${PATH//:/\\n}"
+alias fistory="history | fzf"
+
+function cheat() {
+	curl --user-agent "curl" cheat.sh/"$1";
+}
+
+function crun() {
+	gcc "$1" -Wall -g -Og;
+    ./a.out;
+}
+
+if type fzf &> /dev/null; then
+	sudo apt update;
+	sudo apt install fzf;
+fi
+
+if type rg &> /dev/null; then
+	sudo apt update;
+	sudo apt install ripgrep;
+fi
+
