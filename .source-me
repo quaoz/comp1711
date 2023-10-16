@@ -19,13 +19,16 @@ function crun() {
     ./a.out;
 }
 
+sudo apt update;
+
 if type fzf &> /dev/null; then
-	sudo apt update;
 	sudo apt install fzf;
 fi
 
 if type rg &> /dev/null; then
-	sudo apt update;
 	sudo apt install ripgrep;
 fi
 
+if type radare2 &> /dev/null; then
+	sudo apt install radare2;
+fi
