@@ -15,7 +15,7 @@ function cheat() {
 }
 
 function crun() {
-	gcc "$1" -Wall -g -Og;
+	gcc "$@" -Wall -g -Og;
     ./a.out;
 }
 
