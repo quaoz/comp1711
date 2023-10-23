@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int main() {
-    char filename [] = "numbers.dat";
+    char filename[] = "numbers.dat";
     FILE *file = fopen(filename, "a+");
     
     if (file == NULL) {

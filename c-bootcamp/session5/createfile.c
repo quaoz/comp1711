@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    char filename [] = "data.dat";
+    char filename[] = "data.dat";
     FILE *file = fopen(filename, "w");
     
     if (file == NULL) {

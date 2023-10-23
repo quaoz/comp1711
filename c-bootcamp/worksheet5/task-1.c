@@ -6,7 +6,7 @@ int main() {
     printf("Please enter a number: ");
     scanf(" %d", &num);
 
-    char filename [] = "squares.dat";
+    char filename[] = "squares.dat";
     FILE *file = fopen(filename, "w");
     
     if (file == NULL) {

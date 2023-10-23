@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int main() {
-    char filename [] = "squares.dat";
+    char filename[] = "squares.dat";
     FILE *file = fopen(filename, "r");
     
     if (file == NULL) {
