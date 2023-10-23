@@ -2,12 +2,7 @@
 
 int main() {
     char filename [] = "data.dat";
-    FILE *file = fopen(filename, "r");
-    
-    if (file == NULL) {
-        perror("");
-        return 1;
-    }
+    FILE *file = open_file(filename, "r");
     
     int buffer_size = 100;
     char line_buffer[buffer_size];

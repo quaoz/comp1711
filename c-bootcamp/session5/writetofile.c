@@ -1,13 +1,9 @@
 #include <stdio.h>
+#include "utils.h"
 
 int main() {
     char filename [] = "data.dat";
-    FILE *file = fopen(filename, "w");
-    
-    if (file == NULL) {
-        perror("");
-        return 1;
-    }
+    FILE *file = open_file(filename, "w");
     
     int number, num_lines = 10;
     printf("Type %d numbers: ", num_lines);
